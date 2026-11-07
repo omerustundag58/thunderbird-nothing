@@ -708,6 +708,9 @@
     <string name="background_ops_label">Background sync</string>
     <string name="background_ops_never">Never</string>
     <string name="background_ops_always">Always</string>
+    <string name="battery_optimization_title">Battery optimization</string>
+    <string name="battery_optimization_summary_off">Restricted: background sync may be delayed. Tap to allow unrestricted background use.</string>
+    <string name="battery_optimization_summary_on">Unrestricted: Thunderbird can run in the background.</string>
     <string name="background_ops_auto_sync_only">When \'Auto-sync\' is checked</string>
 
     <string name="batch_select_all">Select all</string>
@@ -1181,4 +1184,53 @@ You can keep this message and use it as a backup for your secret key. If you wan
     <string name="debug_invalidate_access_token_already_modified">Stored access token already modified.</string>
     <string name="debug_feature_flags">DEBUG: Feature Flags</string>
     <string name="no_network_message_will_be_sent_later_toast">Offline. Message will be sent once connection is available</string>
+
+    <!-- On-device AI -->
+    <string name="local_ai_settings_title">On-device AI</string>
+    <string name="local_ai_settings_summary">Classify mail locally with rules and an optional offline model</string>
+    <string name="local_ai_enabled_title">Use local model for ambiguous mail</string>
+    <string name="local_ai_enabled_summary_on">Ambiguous messages may be classified by the imported model. Everything stays on this device.</string>
+    <string name="local_ai_enabled_summary_off">Only the built-in rules are used. The imported model is not loaded.</string>
+    <string name="local_ai_import_model_title">Import model</string>
+    <string name="local_ai_import_model_summary">Select a Gemma 3 1B int4 .task file (not included in the app)</string>
+    <string name="local_ai_model_status_title">Model status</string>
+    <string name="local_ai_model_status_none">No model imported. Rule-based categories still work.</string>
+    <string name="local_ai_model_status_ready">Ready: %1$s (%2$s)</string>
+    <string name="local_ai_model_importing">Importing model…</string>
+    <string name="local_ai_model_import_success">Model imported.</string>
+    <string name="local_ai_model_import_failure">Could not import the model.</string>
+    <string name="local_ai_categories_title">Categories</string>
+    <string name="local_ai_categories_summary">Browse mail classified on this device</string>
+    <string name="local_ai_clear_cache_title">Clear category cache</string>
+    <string name="local_ai_clear_cache_summary">Delete all locally stored classification results</string>
+    <string name="local_ai_info_title">How it works</string>
+    <string name="local_ai_info_summary">Categories are virtual and never move messages. Rules look at the sender and subject first. The imported model is only asked when the rules are unsure, and only for a limited number of messages per scan. No mail leaves the device.</string>
+    <string name="local_ai_categories_screen_title">Categories</string>
+    <string name="local_ai_scan">Scan mail</string>
+    <string name="local_ai_clear">Clear</string>
+    <string name="local_ai_status_starting">Loading the local model and reading mail…</string>
+    <string name="local_ai_status_scanning">Scanning… %1$d / %2$d</string>
+    <string name="local_ai_status_summary">%1$d messages scanned · %2$d by rules · %3$d by model</string>
+    <string name="local_ai_status_cached">%1$d categorized messages cached</string>
+    <string name="local_ai_status_idle">No categories yet. Scan your mail to classify it locally.</string>
+    <string name="local_ai_scan_failed">Scan failed: %1$s</string>
+    <string name="local_ai_categories_empty">No categorized messages yet.</string>
+    <string name="local_ai_category_empty">No cached messages in this category yet. Scan mail from the Categories screen.</string>
+    <string name="local_ai_category_no_samples">No sample subjects yet</string>
+    <string name="local_ai_no_subject">(no subject)</string>
+    <string name="local_ai_unknown_sender">Unknown sender</string>
+    <string name="local_ai_cache_cleared">Category cache cleared.</string>
+    <string name="local_ai_category_finance">Finance</string>
+    <string name="local_ai_category_gaming">Gaming</string>
+    <string name="local_ai_category_subscription">Subscription</string>
+    <string name="local_ai_category_shopping">Shopping</string>
+    <string name="local_ai_category_travel">Travel</string>
+    <string name="local_ai_category_verification">Verification</string>
+    <string name="local_ai_category_social">Social</string>
+    <string name="local_ai_category_newsletter">Newsletter</string>
+    <string name="local_ai_category_other">Other</string>
+    <plurals name="local_ai_message_count">
+        <item quantity="one">%1$d message</item>
+        <item quantity="other">%1$d messages</item>
+    </plurals>
 </resources>

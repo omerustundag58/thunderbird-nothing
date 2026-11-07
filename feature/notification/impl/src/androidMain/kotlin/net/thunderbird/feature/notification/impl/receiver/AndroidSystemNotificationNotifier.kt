@@ -1,7 +1,9 @@
 package net.thunderbird.feature.notification.impl.receiver
 
 import android.app.Notification
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import kotlin.time.ExperimentalTime
@@ -14,6 +16,7 @@ import net.thunderbird.feature.notification.api.content.SystemNotification
 import net.thunderbird.feature.notification.api.ui.action.NotificationAction
 import net.thunderbird.feature.notification.api.ui.style.SystemNotificationStyle
 import net.thunderbird.feature.notification.impl.ui.action.NotificationActionCreator
+import java.util.Locale
 
 private const val TAG = "AndroidSystemNotificationNotifier"
 
@@ -99,8 +102,30 @@ internal class AndroidSystemNotificationNotifier(
                         )
                     }
                 }
+
+                OtpExtractor.extract(systemNotification)?.let { code ->
+                    val label = if (Locale.getDefault().language == "tr") {
+                        "Kodu kopyala"
+                    } else {
+                        "Copy code"
+                    }
+                    addAction(0, label, createOtpPendingIntent(code))
+                }
             }
             .build()
+    }
+
+    private fun createOtpPendingIntent(code: String): PendingIntent {
+        val intent = Intent(applicationContext, CopyOtpReceiver::class.java).apply {
+            putExtra(CopyOtpReceiver.EXTRA_CODE, code)
+            putExtra(CopyOtpReceiver.EXTRA_TIMESTAMP, System.currentTimeMillis())
+        }
+        return PendingIntent.getBroadcast(
+            applicationContext,
+            code.hashCode(),
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
     }
 
     private fun NotificationCompat.Builder.setNotificationStyle(

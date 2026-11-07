@@ -18,6 +18,8 @@ import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
+import com.fsck.k9.ui.localai.CategoryStore
+import com.fsck.k9.ui.localai.LocalModelManager
 import net.thunderbird.core.logging.LogcatExporter
 import net.thunderbird.core.logging.SyncDebugLogExporter
 import net.thunderbird.components.core.logging.testing.TestLogger
@@ -34,6 +36,8 @@ class GeneralSettingsViewModelTest {
     private val viewModel = GeneralSettingsViewModel(
         logcatExporter = logFileWriter,
         syncDebugLogExporter = mock<SyncDebugLogExporter>(),
+        localModelManager = mock<LocalModelManager>(),
+        categoryStore = mock<CategoryStore>(),
     )
     private val testCoroutineDispatcher = StandardTestDispatcher()
 

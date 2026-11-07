@@ -8,10 +8,15 @@ import app.k9mail.feature.launcher.FeatureLauncherActivity
 import app.k9mail.feature.launcher.FeatureLauncherTarget
 import com.eygraber.uri.toKmpUri
 import com.fsck.k9.ui.BuildConfig
+import com.fsck.k9.ui.localai.CategoryStore
+import com.fsck.k9.ui.localai.ImportResult
+import com.fsck.k9.ui.localai.LocalModelManager
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import net.thunderbird.core.logging.LogcatExporter
 import net.thunderbird.core.logging.SyncDebugLogExporter
@@ -22,10 +27,42 @@ private const val TAG = "GeneralSettingsViewModel"
 class GeneralSettingsViewModel(
     private val logcatExporter: LogcatExporter,
     private val syncDebugLogExporter: SyncDebugLogExporter,
+    private val localModelManager: LocalModelManager,
+    private val categoryStore: CategoryStore,
 ) : ViewModel() {
     private var snackbarJob: Job? = null
     private val uiStateFlow = MutableStateFlow<GeneralSettingsUiState>(GeneralSettingsUiState.Idle)
     val uiState: Flow<GeneralSettingsUiState> = uiStateFlow
+
+    private val modelImportStateFlow = MutableStateFlow<ModelImportState>(ModelImportState.Idle)
+    val modelImportState: StateFlow<ModelImportState> = modelImportStateFlow.asStateFlow()
+
+    fun importLocalModel(uri: Uri) {
+        if (modelImportStateFlow.value == ModelImportState.Importing) return
+
+        viewModelScope.launch {
+            modelImportStateFlow.value = ModelImportState.Importing
+            when (val result = localModelManager.importModel(uri)) {
+                is ImportResult.Success -> {
+                    modelImportStateFlow.value = ModelImportState.Success
+                }
+
+                is ImportResult.Failure -> {
+                    modelImportStateFlow.value = ModelImportState.Failure(result.message)
+                }
+            }
+        }
+    }
+
+    fun consumeModelImportState() {
+        if (modelImportStateFlow.value != ModelImportState.Importing) {
+            modelImportStateFlow.value = ModelImportState.Idle
+        }
+    }
+
+    fun clearCategoryCache() {
+        categoryStore.clear()
+    }
 
     fun exportLogs(contentUri: Uri) {
         viewModelScope.launch {
@@ -136,4 +173,11 @@ enum class SnackbarState {
     Hidden,
     ExportLogSuccess,
     ExportLogFailure,
+}
+
+sealed interface ModelImportState {
+    data object Idle : ModelImportState
+    data object Importing : ModelImportState
+    data object Success : ModelImportState
+    data class Failure(val message: String) : ModelImportState
 }

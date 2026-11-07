@@ -194,7 +194,12 @@ android {
 
     packaging {
         jniLibs {
-            excludes += listOf("kotlin/**")
+            excludes += listOf(
+                "kotlin/**",
+                // MediaPipe ships native libraries for emulator ABIs we never install.
+                "lib/x86/**",
+                "lib/x86_64/**",
+            )
         }
 
         resources {

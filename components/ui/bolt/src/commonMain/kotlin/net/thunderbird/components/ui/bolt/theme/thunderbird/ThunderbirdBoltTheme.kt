@@ -37,7 +37,7 @@ fun ThunderbirdBoltTheme(
         sizes = defaultThemeSizes,
         spacings = defaultThemeSpacings,
         shapes = defaultThemeShapes,
-        typography = defaultTypography,
+        typography = defaultTypography(),
     )
 
     BoltTheme(

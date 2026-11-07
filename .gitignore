@@ -1,6 +1,8 @@
 # Gradle
 .gradle/
 local.properties
+build-*.txt
+*.task
 
 # Kotlin
 .kotlin/

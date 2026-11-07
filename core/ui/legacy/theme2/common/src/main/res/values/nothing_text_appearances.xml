@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nothing OS inspired text appearances: Doto for display/headline, Inter for body. -->
+<resources>
+    <style name="TextAppearance.Nothing.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/doto</item>
+        <item name="android:fontFamily">@font/doto</item>
+    </style>
+    <style name="TextAppearance.Nothing.DisplayMedium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/doto</item>
+        <item name="android:fontFamily">@font/doto</item>
+    </style>
+    <style name="TextAppearance.Nothing.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/doto</item>
+        <item name="android:fontFamily">@font/doto</item>
+    </style>
+    <style name="TextAppearance.Nothing.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/doto</item>
+        <item name="android:fontFamily">@font/doto</item>
+    </style>
+    <style name="TextAppearance.Nothing.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/doto</item>
+        <item name="android:fontFamily">@font/doto</item>
+    </style>
+    <style name="TextAppearance.Nothing.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/doto</item>
+        <item name="android:fontFamily">@font/doto</item>
+    </style>
+    <style name="TextAppearance.Nothing.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/doto</item>
+        <item name="android:fontFamily">@font/doto</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    <style name="TextAppearance.Nothing.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+    <style name="TextAppearance.Nothing.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+    <style name="TextAppearance.Nothing.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+    <style name="TextAppearance.Nothing.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+    <style name="TextAppearance.Nothing.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+    <style name="TextAppearance.Nothing.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+    <style name="TextAppearance.Nothing.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+    <style name="TextAppearance.Nothing.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+</resources>

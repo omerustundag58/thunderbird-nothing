@@ -532,6 +532,12 @@
             android:title="@string/background_ops_label"
             />
 
+        <Preference
+            android:key="battery_optimization"
+            android:summary="@string/battery_optimization_summary_off"
+            android:title="@string/battery_optimization_title"
+            />
+
     </PreferenceScreen>
 
     <PreferenceScreen
@@ -572,6 +578,55 @@
             android:key="enable_telemetry"
             android:summary="@string/settings_ui_telemetry_description"
             android:title="@string/settings_ui_telemetry_title"
+            />
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/ic_analytics"
+        android:key="local_ai_preferences"
+        android:title="@string/local_ai_settings_title"
+        android:summary="@string/local_ai_settings_summary"
+        search:ignore="true"
+        >
+
+        <SwitchPreferenceCompat
+            android:key="local_ai_enabled"
+            android:persistent="false"
+            android:summaryOff="@string/local_ai_enabled_summary_off"
+            android:summaryOn="@string/local_ai_enabled_summary_on"
+            android:title="@string/local_ai_enabled_title"
+            />
+
+        <Preference
+            android:key="local_ai_import_model"
+            android:summary="@string/local_ai_import_model_summary"
+            android:title="@string/local_ai_import_model_title"
+            />
+
+        <Preference
+            android:key="local_ai_model_status"
+            android:summary="@string/local_ai_model_status_none"
+            android:title="@string/local_ai_model_status_title"
+            />
+
+        <Preference
+            android:key="local_ai_categories"
+            android:summary="@string/local_ai_categories_summary"
+            android:title="@string/local_ai_categories_title"
+            />
+
+        <Preference
+            android:key="local_ai_clear_cache"
+            android:summary="@string/local_ai_clear_cache_summary"
+            android:title="@string/local_ai_clear_cache_title"
+            />
+
+        <Preference
+            android:key="local_ai_info"
+            android:selectable="false"
+            android:summary="@string/local_ai_info_summary"
+            android:title="@string/local_ai_info_title"
             />
 
     </PreferenceScreen>

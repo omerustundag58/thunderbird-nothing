@@ -69,6 +69,7 @@ dependencies {
     implementation(libs.androidx.work.runtime)
 
     implementation(libs.commons.io)
+    implementation(libs.mediapipe.tasks.genai)
     implementation(libs.androidx.core.ktx)
     implementation(libs.jcip.annotations)
     implementation(libs.mime4j.core)

@@ -10,33 +10,33 @@
         <!-- Legacy styles -->
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
 
-        <item name="iconStarColor">#fbbc04</item>
+        <item name="iconStarColor">#D71921</item>
 
         <item name="textColorPrimaryRecipientDropdown">@android:color/primary_text_light</item>
         <item name="textColorSecondaryRecipientDropdown">@android:color/secondary_text_light</item>
 
-        <item name="messageListSwipeSelectColor">@color/material_blue_600</item>
-        <item name="messageListSwipeToggleReadColor">@color/material_blue_600</item>
-        <item name="messageListSwipeToggleStarColor">@color/material_orange_600</item>
-        <item name="messageListSwipeArchiveColor">@color/material_green_600</item>
-        <item name="messageListSwipeDeleteColor">@color/material_red_600</item>
-        <item name="messageListSwipeSpamColor">@color/material_red_700</item>
-        <item name="messageListSwipeMoveColor">@color/material_purple_500</item>
+        <item name="messageListSwipeSelectColor">#D71921</item>
+        <item name="messageListSwipeToggleReadColor">#5C5C60</item>
+        <item name="messageListSwipeToggleStarColor">#D71921</item>
+        <item name="messageListSwipeArchiveColor">#5C5C60</item>
+        <item name="messageListSwipeDeleteColor">#D71921</item>
+        <item name="messageListSwipeSpamColor">#B00010</item>
+        <item name="messageListSwipeMoveColor">#5C5C60</item>
 
-        <item name="contactPictureFallbackDefaultBackgroundColor">#ffababab</item>
+        <item name="contactPictureFallbackDefaultBackgroundColor">#C4C4C0</item>
         <item name="contactPictureFallbackBackgroundColors">@array/contact_picture_fallback_background_colors_light</item>
-        <item name="contactTokenBackgroundColor">#ccc</item>
-        <item name="tintColorBulletPointPositive">#77aa22</item>
-        <item name="tintColorBulletPointNegative">#dd2222</item>
-        <item name="tintColorBulletPointNeutral">#888</item>
+        <item name="contactTokenBackgroundColor">#E2E2DE</item>
+        <item name="tintColorBulletPointPositive">#2E7D32</item>
+        <item name="tintColorBulletPointNegative">#D71921</item>
+        <item name="tintColorBulletPointNeutral">#A3A3A7</item>
 
-        <item name="openpgp_black">#000</item>
-        <item name="openpgp_orange">#FF8800</item>
-        <item name="openpgp_red">#CC0000</item>
-        <item name="openpgp_green">#669900</item>
-        <item name="openpgp_blue">#336699</item>
-        <item name="openpgp_grey">#bbb</item>
-        <item name="openpgp_dark_grey">#888</item>
+        <item name="openpgp_black">#000000</item>
+        <item name="openpgp_orange">#D71921</item>
+        <item name="openpgp_red">#D71921</item>
+        <item name="openpgp_green">#1E5B31</item>
+        <item name="openpgp_blue">#5C5C60</item>
+        <item name="openpgp_grey">#A3A3A7</item>
+        <item name="openpgp_dark_grey">#5C5C60</item>
     </style>
 
     <style name="Theme.Thunderbird.Dark" parent="Theme2.Thunderbird.Dark">
@@ -47,33 +47,33 @@
         <!-- Legacy styles -->
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
 
-        <item name="iconStarColor">#fdd663</item>
+        <item name="iconStarColor">#D71921</item>
 
         <item name="textColorPrimaryRecipientDropdown">@android:color/primary_text_dark</item>
         <item name="textColorSecondaryRecipientDropdown">@android:color/secondary_text_dark</item>
 
-        <item name="messageListSwipeSelectColor">@color/material_blue_700</item>
-        <item name="messageListSwipeToggleReadColor">@color/material_blue_700</item>
-        <item name="messageListSwipeToggleStarColor">@color/material_orange_700</item>
-        <item name="messageListSwipeArchiveColor">@color/material_green_700</item>
-        <item name="messageListSwipeDeleteColor">@color/material_red_700</item>
-        <item name="messageListSwipeSpamColor">@color/material_red_800</item>
-        <item name="messageListSwipeMoveColor">@color/material_purple_600</item>
+        <item name="messageListSwipeSelectColor">#D71921</item>
+        <item name="messageListSwipeToggleReadColor">#3F3F42</item>
+        <item name="messageListSwipeToggleStarColor">#D71921</item>
+        <item name="messageListSwipeArchiveColor">#3F3F42</item>
+        <item name="messageListSwipeDeleteColor">#D71921</item>
+        <item name="messageListSwipeSpamColor">#B00010</item>
+        <item name="messageListSwipeMoveColor">#3F3F42</item>
 
-        <item name="contactTokenBackgroundColor">#313131</item>
-        <item name="contactPictureFallbackDefaultBackgroundColor">#ff606060</item>
+        <item name="contactTokenBackgroundColor">#1B1B1D</item>
+        <item name="contactPictureFallbackDefaultBackgroundColor">#3F3F42</item>
         <item name="contactPictureFallbackBackgroundColors">@array/contact_picture_fallback_background_colors_dark</item>
-        <item name="tintColorBulletPointPositive">#77aa22</item>
-        <item name="tintColorBulletPointNegative">#dd2222</item>
-        <item name="tintColorBulletPointNeutral">#bbb</item>
+        <item name="tintColorBulletPointPositive">#8EE7AA</item>
+        <item name="tintColorBulletPointNegative">#FF5252</item>
+        <item name="tintColorBulletPointNeutral">#A3A3A7</item>
 
-        <item name="openpgp_black">#fff</item>
-        <item name="openpgp_orange">#ee7700</item>
-        <item name="openpgp_red">#CC0000</item>
-        <item name="openpgp_green">#77aa00</item>
-        <item name="openpgp_blue">#6699cc</item>
-        <item name="openpgp_grey">#888</item>
-        <item name="openpgp_dark_grey">#bbb</item>
+        <item name="openpgp_black">#FFFFFF</item>
+        <item name="openpgp_orange">#FF5252</item>
+        <item name="openpgp_red">#FF5252</item>
+        <item name="openpgp_green">#8EE7AA</item>
+        <item name="openpgp_blue">#A3A3A7</item>
+        <item name="openpgp_grey">#2E2E31</item>
+        <item name="openpgp_dark_grey">#1B1B1D</item>
     </style>
 
     <style name="Theme.Thunderbird.Light.Dialog" parent="Theme.Thunderbird.Light" />
@@ -88,9 +88,9 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
 
-        <item name="tintColorBulletPointPositive">#77aa22</item>
-        <item name="tintColorBulletPointNegative">#dd2222</item>
-        <item name="tintColorBulletPointNeutral">#bbb</item>
+        <item name="tintColorBulletPointPositive">#2E7D32</item>
+        <item name="tintColorBulletPointNegative">#D71921</item>
+        <item name="tintColorBulletPointNeutral">#A3A3A7</item>
     </style>
 
     <style name="Theme.Thunderbird.Dark.Dialog.Translucent" parent="Theme.Material3.Dark.Dialog">
@@ -102,9 +102,9 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
 
-        <item name="tintColorBulletPointPositive">#77aa22</item>
-        <item name="tintColorBulletPointNegative">#dd2222</item>
-        <item name="tintColorBulletPointNeutral">#bbb</item>
+        <item name="tintColorBulletPointPositive">#8EE7AA</item>
+        <item name="tintColorBulletPointNegative">#FF5252</item>
+        <item name="tintColorBulletPointNeutral">#A3A3A7</item>
     </style>
 
     <style name="Theme.Thunderbird.DayNight" parent="Theme.Thunderbird.Light" />

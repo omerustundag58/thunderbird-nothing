@@ -37,7 +37,7 @@ fun K9MailBoltTheme(
         sizes = defaultThemeSizes,
         spacings = defaultThemeSpacings,
         shapes = defaultThemeShapes,
-        typography = defaultTypography,
+        typography = defaultTypography(),
     )
 
     BoltTheme(

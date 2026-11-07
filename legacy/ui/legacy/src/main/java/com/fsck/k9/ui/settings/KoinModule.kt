@@ -21,6 +21,8 @@ val settingsUiModule = module {
         GeneralSettingsViewModel(
             logcatExporter = get(),
             syncDebugLogExporter = get(),
+            localModelManager = get(),
+            categoryStore = get(),
         )
     }
     factory {
